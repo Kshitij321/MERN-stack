@@ -8,7 +8,7 @@ const useLogin = () => {
   const login = async (email, password) => {
     setIsloading(true);
     setError(null)
-    const res = await fetch("https://mern-stack-backend-1wcw.onrender.com/", {
+    const res = await fetch("https://mern-stack-backend-1wcw.onrender.com/api/user/login", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email, password }),
