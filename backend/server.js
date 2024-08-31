@@ -8,6 +8,7 @@ require("dotenv").config();
 const workoutroutes = require("./routes/workouts");
 const app = express();
 
+app.options('*', cors());
 
 
 
