@@ -12,7 +12,6 @@ const useLogin = () => {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email, password }),
-      mode:'cors'
     });
     const json = await res.json();
     if (!res.ok) {
