@@ -8,7 +8,7 @@ const useSignup = () => {
     const [isloading,setIsloading]=useState(false);
     const signup= async (email,password)=>{
         setIsloading(true);
-        const res=await fetch('https://mern-stack-backend-1wcw.onrender.com/',{
+        const res=await fetch('https://mern-stack-backend-1wcw.onrender.com/api/user/signup',{
             method:'POST',
             headers:{'content-type':'application/json'},
             body:JSON.stringify({email,password})
