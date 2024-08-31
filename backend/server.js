@@ -8,13 +8,14 @@ require("dotenv").config();
 const workoutroutes = require("./routes/workouts");
 const app = express();
 
-app.options('*', cors());
+
 
 
 
 
 
 app.use(cors());
+app.options('*', cors());
 const port = process.env.PORT || 4000;
 
 //middleware, parses the incoming JSON data and put it in req.body
