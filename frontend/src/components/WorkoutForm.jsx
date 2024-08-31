@@ -28,7 +28,7 @@ const WorkoutForm = () => {
     const workout = { title, load, reps }; //data to be sent
     //we send the post request to send the data
     //convert the object to the JSON by JSON.stringify
-    const response = await fetch("https://mern-stack-backend-1wcw.onrender.com/", {
+    const response = await fetch("https://mern-stack-backend-1wcw.onrender.com/api/workouts", {
       method: "POST",
       body: JSON.stringify(workout),
       headers: {
