@@ -14,7 +14,7 @@ const app = express();
 
 
 app.use(cors());
-
+const PORT = process.env.PORT || 4000;
 
 //middleware, parses the incoming JSON data and put it in req.body
 //to be available for route handlers
@@ -27,7 +27,7 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     //listening to port
-    app.listen(process.env.PORT, () => {
+    app.listen(PORT, () => {
       console.log("connected to db & listening to", process.env.PORT);
     });
   })
